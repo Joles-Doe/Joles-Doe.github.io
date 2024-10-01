@@ -1,0 +1,16 @@
+.sectionGreeting, .sectionAboutMe, .sectionProjects {
+    display: flex;
+    justify-content: center;
+}
+
+.sectionGreeting {
+    background-color: cornflowerblue;
+}
+
+.sectionAboutMe {
+    background-color: chartreuse;
+}
+
+.sectionProjects {
+    background-color: darkslateblue;
+}
