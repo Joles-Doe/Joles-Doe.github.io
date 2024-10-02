@@ -3,11 +3,74 @@
     padding: 0;
 }
 
+body {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    top: 40px;
+    width: 80vw;
+    background-color: cyan;
+}
+
 .sectionGreeting, .sectionAboutMe, .sectionProjects {
     position: relative;
 }
 
-.divGreeting {
+/* -- Greeting Section Styles -- */
+
+.sectionGreeting {
+    background-color: green;
+    display: inline-flex;
+}
+
+.divTitleImage {
+    background-color: chocolate;
+}
+
+.titleImage {
+    padding: 20px;
+    max-width: 30vw;
+}
+
+.sectionTitle {
+    max-width: 30vw;
+    background-color: rgb(255, 0, 212);
+}
+
+.sectionTitleText {
+    background-color: lime;
+    text-align: center;
+    font-size: 6vw;
+}
+
+/* -- About Me Section Styles -- */
+
+.sectionAboutMe {
+    background-color: chartreuse;
+}
+
+/* -- Projects Section Styles -- */
+
+.sectionProjects {
+    background-color: darkslateblue;
+}
+
+
+
+
+
+
+
+
+
+
+/* .divGreeting {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,21 +88,10 @@
     left: -5vw;
 }
 
-.greetingTitle {
-    font-size: 8vw;
-    text-align: center;
-}
+
 
 .greetingTitleText {
     font-size: 6vw;
     padding: 10px;
     text-align: center;
-}
-
-.sectionAboutMe {
-    background-color: chartreuse;
-}
-
-.sectionProjects {
-    background-color: darkslateblue;
-}
+} */
