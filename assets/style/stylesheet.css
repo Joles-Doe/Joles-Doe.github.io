@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sectionGreeting, .sectionAboutMe, .sectionProjects {
+    position: relative;
+}
+
+.divGreeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sectionGreeting {
+    background-color: cornflowerblue;
+}
+
+.portraitImage {
+    width: 40%;
+    padding: 10px;
+    position: relative;
+    left: -5vw;
+}
+
+.greetingTitle {
+    font-size: 8vw;
+    text-align: center;
+}
+
+.greetingTitleText {
+    font-size: 6vw;
+    padding: 10px;
+    text-align: center;
+}
+
+.sectionAboutMe {
+    background-color: chartreuse;
+}
+
+.sectionProjects {
+    background-color: darkslateblue;
+}
