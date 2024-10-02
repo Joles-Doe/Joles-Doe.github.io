@@ -13,19 +13,25 @@
         <meta property="og:title" content="Scott Lewis - Portfolio">
         <meta property="og:description" content="Portfolio by Scott Lewis, Games Developer.">
         <!--<meta property="og:image" content="absolute path for image">-->
-        <!-- Stylesheet & Scripts -->
+        <!-- Fonts, Stylesheet and Scripts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/style/stylesheet.css">
     </head>
 
-    <body>
+    <body> <!-- Flex container -->
+        <!-- Divs in this indent are flex objects -->
         <div class="main">
-            <div class="sectionGreeting">
-                <div class="divTitleImage">
+            <!-- Divs in this indent are NOT flex -->
+            <div class="title">
+                <h1 class="fontLoraBold"> Scott Lewis </h1>
+                <div class="titleContent">
                     <img src="assets/images/placeholder.png" class="titleImage">
-                </div>
-                <div class="sectionTitle">
-                    <h1 class="sectionTitleText"> Hello! </h1>
-                    <h1 class="sectionTitleText"> I'm Scott! </h1>
+                    <p class="fontLoraSemiBold titleText">
+                        Passionate games programmer dedicated to creating engaging gaming experiences, 
+                        with a keen interest in back-end development.
+                    </p>
                 </div>
             </div>
         </div>
