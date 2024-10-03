@@ -134,38 +134,3 @@ body {
 .projects {
     border-top: 2px solid black;
 }
-
-
-
-
-
-
-
-
-
-
-/* .divGreeting {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.sectionGreeting {
-    background-color: cornflowerblue;
-}
-
-.portraitImage {
-    width: 40%;
-    padding: 10px;
-    position: relative;
-    left: -5vw;
-}
-
-
-
-.greetingTitleText {
-    font-size: 6vw;
-    padding: 10px;
-    text-align: center;
-} */
