@@ -35,19 +35,23 @@ body {
     
 }
 
+/* -- Title Section Styles -- */
+
 .title {
+    padding-top: 60px;
     position: relative;
     text-align: center;
     font-size: 3vw;
+    height: 100vh;
 }
 
 .titleContent {
+    padding-top: 250px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
-    padding-top: 40px;
 }
 
 .titleImage {
@@ -60,17 +64,42 @@ body {
     padding-left: 30px;
 }
 
-/* -- Greeting Section Styles -- */
-
-.sectionGreeting {
-    background-color: green;
-    display: inline-flex;
-}
-
 /* -- About Me Section Styles -- */
 
-.sectionAboutMe {
-    background-color: chartreuse;
+.aboutMe {
+    display: flex;
+    height: 200vh;
+}
+
+.aboutMeTitle {
+    text-align: center;
+    font-size: 2.5vw;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMePages {
+    width: 50%;
+}
+
+.aboutMePages div> p {
+    width: 80%;
+    font-size: 20px;
+}
+
+.aboutMePageOne {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutMePageTwo {
+
 }
 
 /* -- Projects Section Styles -- */
