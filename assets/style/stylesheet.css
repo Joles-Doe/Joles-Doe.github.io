@@ -43,6 +43,7 @@ body {
     text-align: center;
     font-size: 3vw;
     height: 100vh;
+    border-bottom: 2px solid black;
 }
 
 .titleContent {
@@ -74,23 +75,38 @@ body {
 .aboutMeTitle {
     text-align: center;
     font-size: 2.5vw;
-    width: 50%;
+    width: 30%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    border-right: 2px solid black;
 }
 
 .aboutMePages {
-    width: 50%;
+    width: 70%;
 }
 
 .aboutMePages div> p {
     width: 80%;
     font-size: 20px;
+    line-height: 1.6;
+}
+
+.aboutMePages div> h2 {
+    font-size: 50px;
 }
 
 .aboutMePageOne {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutMePageTwo {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -98,14 +114,25 @@ body {
     align-items: center;
 }
 
-.aboutMePageTwo {
+.aboutMePageTwoImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
+}
 
+.aboutMePageTwoIcon {
+    padding: 20px;
+    width: 20%;
+    height: auto;
 }
 
 /* -- Projects Section Styles -- */
 
-.sectionProjects {
-    background-color: darkslateblue;
+.projects {
+    border-top: 2px solid black;
 }
 
 

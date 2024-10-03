@@ -2,14 +2,14 @@ function SplitScroll() {
     const scrollController = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
-        duration: 500,
-        triggerElement: '.aboutMeTitle'
+        duration: '100%',
+        triggerElement: '.aboutMeTitle',
+        triggerHook: 0
     })
-    .addIndicators()
+    .setPin('.aboutMeTitle')
     .addTo(scrollController)
 }
 
-console.log("jQuery version:", jQuery.fn.jquery);
 $(document).ready(function() {
     SplitScroll();
 });
