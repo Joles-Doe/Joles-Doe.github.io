@@ -132,5 +132,25 @@ body {
 /* -- Projects Section Styles -- */
 
 .projects {
+    background-color: brown;
     border-top: 2px solid black;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#projectImageTrack {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    translate: 0%, 0%;
+    gap: 4vmin;
+}
+
+.projectImageTrack > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center;
 }
