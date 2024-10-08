@@ -38,7 +38,7 @@ body {
 /* -- Title Section Styles -- */
 
 .title {
-    padding-top: 60px;
+    padding-top: 5vmin;
     position: relative;
     text-align: center;
     font-size: 3vw;
@@ -47,7 +47,7 @@ body {
 }
 
 .titleContent {
-    padding-top: 250px;
+    padding-top: 10vmin;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,6 +64,39 @@ body {
     max-width: 50vw;
     padding-left: 30px;
 }
+
+
+@media only screen and (max-width: 500px) {
+    .title {
+        padding-top: 5vmin;
+        position: relative;
+        text-align: center;
+        font-size: 7vw;
+        height: 100vh;
+        border-bottom: 2px solid black;
+    }
+    
+    .titleContent {
+        padding-top: 10vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+    }
+    
+    .titleImage {
+        border-radius: 50%;
+        width: 60%;
+    }
+    
+    .titleText {
+        padding: 0px;
+        font-size: 5vw;
+        margin-top: 10px;
+    }
+}
+
 
 /* -- About Me Section Styles -- */
 
@@ -88,14 +121,15 @@ body {
     width: 70%;
 }
 
-.aboutMePages div> p {
-    width: 80%;
-    font-size: 20px;
-    line-height: 1.6;
+.aboutMePages div> h2 {
+    padding-top: 10%;
+    font-size: 10vmin;
 }
 
-.aboutMePages div> h2 {
-    font-size: 50px;
+.aboutMePages div> p {
+    width: 80%;
+    font-size: 3vmin;
+    line-height: 1.6;
 }
 
 .aboutMePageOne {
@@ -105,6 +139,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
 
 .aboutMePageTwo {
     height: 100vh;
@@ -141,6 +176,36 @@ body {
 
 #projectImageTrack {
     display: flex;
+    gap: 4vmin;
+}
+
+#projectImageTrack > .image {
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #projectImageTrack {
+    display: flex;
     position: absolute;
     top: 10%;
     left: 50%;
@@ -153,4 +218,4 @@ body {
     height: 56vmin;
     object-fit: cover;
     object-position: center;
-}
+} */
