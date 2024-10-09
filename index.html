@@ -44,20 +44,63 @@
             </div>
             
             <div class="projects">
-                <div id="projectImageTrack">
-                    <img src="assets/images/placeholder_large.png" class="image" draggable="false">
-                    <button onclick="document.location='assets/pages/FerociousFruits.html'"></button>
-                </div>
+                <h1 class="projectsTitle"> My Projects </h1>
+                <button class="projectContainer" onclick="document.location='Tapper.html'">
+                    <video class="projectVideo" autoplay muted loop>
+                        <source src="assets/videos/Tapper.mp4" type="video/mp4">
+                    </video>
+                    <div class="projectContent">
+                        <h1 class="fontLoraBold"> Tapper </h1>
+                        <p class="fontLoraSemiBold">Made using SDL, this recreation of the classic arcade game features 
+                            it's own game engine that uses shared pointers to control memory and update game elements.
+                        </p>
+                    </div>
+                </button>
+                <button class="projectContainer" onclick="document.location='WackoTilt.html'">
+                    <video class="projectVideo" autoplay muted loop>
+                        <source src="assets/videos/WackoTilt.mp4" type="video/mp4">
+                    </video>
+                    <div class="projectContent">
+                        <h1 class="fontLoraBold"> Wacko Tilt </h1>
+                        <p class="fontLoraSemiBold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe, magnam,</p>
+                    </div>
+                </button>
+                <button class="projectContainer" onclick="document.location='FerociousFruits.html'">
+                    <img class="projectImage" src="assets/images/placeholder_large.png">
+                    <div class="projectContent">
+                        <h1 class="fontLoraBold"> University Resource Manager </h1>
+                        <p class="fontLoraSemiBold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe, magnam,</p>
+                    </div>
+                </button>
+                <button class="projectContainer" onclick="document.location='Connect4.html'">
+                    <img class="projectImage" src="assets/images/placeholder_large.png">
+                    <div class="projectContent">
+                        <h1 class="fontLoraBold"> TEST TEST TEST </h1>
+                        <p class="fontLoraSemiBold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe, magnam,</p>
+                    </div>
+                </button>
+                <button class="projectContainer" onclick="document.location='PasswordManager.html'">
+                    <img class="projectImage" src="assets/images/placeholder_large.png">
+                    <div class="projectContent">
+                        <h1 class="fontLoraBold"> TEST TEST TEST </h1>
+                        <p class="fontLoraSemiBold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe, magnam,</p>
+                    </div>
+                </button>
             </div>
+            
+                <!-- <div class="projectImages">
+                    <img src="assets/images/placeholder_large.png" class="image" draggable="false">
+                    <button onclick="document.location='FerociousFruits.html'"></button>
+                </div> -->
 
             <div class="aboutMe">
                 <div class="aboutMeTitle">
-                    <h2> About Me </h2>
+                    <h2 class="fontLoraBold"> About Me </h2>
                 </div>
                 <div class="aboutMePages">
                     <div class="aboutMePageOne">
-                        <h2> Who am I? </h2>
-                        <p>
+                        <h2 class="fontLoraBold"> Who am I? </h2>
+                        <p class="fontLoraSemiBold">
                             <br>
                             I'm Scott - a student in Bournemouth University currently on his second year. My love for the gaming
                             industry has brought me to study Games Development. I've always been fascinated in the inner workings
@@ -72,7 +115,7 @@
                         </p>
                     </div>
                     <div class="aboutMePageTwo">
-                        <h2 style="margin-bottom: -80px;"> My Skills </h2>
+                        <h2 class="fontLoraSemiBold" style="margin-bottom: -80px;"> My Skills </h2>
                         <div class="aboutMePageTwoImages">
                             <img src="assets/images/c++.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/csharp.png" class="aboutMePageTwoIcon">
