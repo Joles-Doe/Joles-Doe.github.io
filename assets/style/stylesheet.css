@@ -39,10 +39,10 @@ body {
 
 .title {
     padding-top: 5vmin;
+    padding-bottom: 15vmin;
     position: relative;
     text-align: center;
     font-size: 3vw;
-    height: 100vh;
     border-bottom: 2px solid black;
 }
 
@@ -64,39 +64,6 @@ body {
     max-width: 50vw;
     padding-left: 30px;
 }
-
-
-@media only screen and (max-width: 500px) {
-    .title {
-        padding-top: 5vmin;
-        position: relative;
-        text-align: center;
-        font-size: 7vw;
-        height: 100vh;
-        border-bottom: 2px solid black;
-    }
-    
-    .titleContent {
-        padding-top: 10vmin;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 2vw;
-    }
-    
-    .titleImage {
-        border-radius: 50%;
-        width: 60%;
-    }
-    
-    .titleText {
-        padding: 0px;
-        font-size: 5vw;
-        margin-top: 10px;
-    }
-}
-
 
 /* -- About Me Section Styles -- */
 
@@ -127,8 +94,8 @@ body {
 }
 
 .aboutMePages div> p {
-    width: 80%;
-    font-size: 3vmin;
+    width: 90%;
+    font-size: 2vmin;
     line-height: 1.6;
 }
 
@@ -190,7 +157,48 @@ body {
 
 
 
-
+@media only screen and (max-width: 500px) {
+    .title {
+        padding-top: 5vmin;
+        padding-bottom: 15vmin;
+        position: relative;
+        text-align: center;
+        font-size: 7vw;
+        border-bottom: 2px solid black;
+    }
+    
+    .titleContent {
+        padding-top: 10vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+    }
+    
+    .titleImage {
+        border-radius: 50%;
+        width: 60%;
+    }
+    
+    .titleText {
+        padding: 0px;
+        font-size: 5vw;
+        margin-top: 10px;
+    }
+    
+    .aboutMePages div> p {
+        width: 90%;
+        font-size: 3.5vmin;
+        line-height: 1.6;
+    }
+    
+    .aboutMePageTwoIcon {
+        padding: 20px;
+        width: 30%;
+        height: auto;
+    }
+}
 
 
 
