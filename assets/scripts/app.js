@@ -12,9 +12,6 @@ function SplitScroll() {
 
 $(document).ready(function() {
     SplitScroll();
-
-    
-
 });
 
 

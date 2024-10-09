@@ -135,8 +135,8 @@ body {
 
 .projects {
     background-color: brown;
-    border-top: 2px solid black;
-    height: 100vh;
+    border-bottom: 2px solid black;
+    height: auto;
     overflow: hidden;
     position: relative;
 }
@@ -189,7 +189,7 @@ body {
     
     .aboutMePages div> p {
         width: 90%;
-        font-size: 3.5vmin;
+        font-size: 3vmin;
         line-height: 1.6;
     }
     
