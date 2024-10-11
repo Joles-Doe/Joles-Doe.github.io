@@ -28,6 +28,7 @@ body {
 }
 
 .main {
+    background-color: azure;
     position: relative;
     top: 10px;
     padding: 15px;
@@ -182,9 +183,34 @@ body {
     padding-top: 5px;
 }
 
+/* Detailed Project Page Styles */
 
+.pageTitle {
+    padding: 3vmin;
+    position: relative;
+    text-align: center;
+    font-size: 3vw;
+}
 
+.returnSection {
+    position: relative;
+    padding: 2vmin;
+}
 
+.returnButton {
+    position: relative;
+    background-color: burlywood;
+    left: 10%;
+    padding: 1vmin;
+}
+
+.titleVideo {
+    align-items: center;
+}
+
+.titleVideo > video {
+    width: 50%;
+}
 
 @media only screen and (max-width: 500px) {
     .title {
