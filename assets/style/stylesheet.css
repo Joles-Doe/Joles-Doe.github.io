@@ -30,7 +30,6 @@ body {
 .main {
     background-color: azure;
     position: relative;
-    top: 10px;
     padding: 15px;
     width: 80vw;
     
@@ -43,7 +42,7 @@ body {
     padding-bottom: 15vmin;
     position: relative;
     text-align: center;
-    font-size: 3vw;
+    font-size: 7vmin;
     border-bottom: 2px solid black;
 }
 
@@ -190,10 +189,12 @@ body {
     padding-top: 0vmin;
     position: relative;
     text-align: center;
-    font-size: 3vw;
+    font-size: 8vmin;
 }
 
 .returnSection {
+    display: flex;
+    justify-content: center;
     position: relative;
     padding: 2vmin;
 }
@@ -201,7 +202,6 @@ body {
 .returnButton {
     position: relative;
     background-color: burlywood;
-    left: 10%;
     padding: 1vmin;
 }
 
@@ -214,17 +214,46 @@ body {
     text-align: center;
     position: relative;
     width: 100%;
-    height: 65vmin;
+    height: 60vmin; /* Note to self, in media for mobile, use height: 40vw; */
     padding-bottom: 2vmin;
-    border-bottom: 2px solid black;
+    
 }
 
 .titleVideoContainer > video {
     height: 100%;
+    width: auto;
     object-fit: contain;
     object-position: center;
     overflow: hidden;
     border: 2px solid black;
+}
+
+.githubLink {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2vmin;
+    border-bottom: 2px solid black;
+}
+
+.githubButton {
+    display: flex;
+    background-color: burlywood;
+    padding: 1vmin;
+}
+
+.githubButton > img {
+    width: 10vmin;
+    height: 10vmin;
+    object-fit: contain;
+    object-position: center;
+}
+
+.githubButton > h1 {
+    padding: 1vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pageContent {
@@ -239,6 +268,17 @@ body {
 .pageContent > p {
     font-size: 3vmin;
     line-height: 1.6;
+}
+
+.inlineImageContainer {
+    padding: 2vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inlineImageContainer > img {
+    width: 50vw;
 }
 
 @media only screen and (max-width: 500px) {

@@ -14,10 +14,76 @@
         <meta property="og:description" content="Wacko Tilt project by Scott Lewis">
         <!--<meta property="og:image" content="absolute path for image">-->
         <!-- Fonts, Stylesheet and Scripts -->
-        <!-- <link rel="stylesheet" href="assets/style/stylesheet.css"> -->
+        <link rel="stylesheet" href="assets/style/stylesheet.css">
     </head>
 
     <body>
-
+        <div class="main">
+            <div class="pageTitle">
+                <noscript>
+                    <h1 class="fontLoraBold"> This page may not work correctly without Javascript! Please enable it and reload. </h1>
+                </noscript>
+                <h1 class="fontLoraBold"> Wacko Tilt </h1>
+            </div>
+            <div class="returnSection">
+                <button class="returnButton" onclick="document.location='index.html'">
+                    <h1 class="fontLoraBold"> Return to Homepage </h1>
+                </button>
+            </div>
+            <div class="titleVideo">
+                <div class="titleVideoContainer">
+                    <video autoplay muted loop>
+                        <source src="assets/videos/WackoTilt.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="githubLink">
+                <button class="githubButton" onclick="document.location='https://github.com/Joles-Doe/Marble-Game'">
+                    <img src="assets/images/github.png">
+                    <h1 class="fontLoraBold"> Link to Github </h1>
+                </button>
+            </div>
+            <div class="pageContent">
+                <h1 class="fontLoraBold"> Introduction </h1>
+                <p class="fontLoraSemiBold">
+                    During my first year of University, I got to grips with some game engines and their inner workings. One such engine was Unity – 
+                    I liked this engine because it offered a nice balance between flexibility and ease of use. The interface and general layout 
+                    made it easy for beginners to work with. After a few months of getting to grips with the engine, I wanted to make a small game 
+                    to apply what I had learnt. Although I had difficulty deciding on what game to make, I decided to recreate one of my favourite 
+                    minigames from Wii Fit – Table Tilt. Additionally, I gave myself a limited timeframe to emulate a deadline in the games industry. 
+                    I used this deadline to gauge how much progress I could make in a month or so, and when I finished the project, could look back and 
+                    evaluate what needed to be improved for the future.
+                </p>
+                <h1 class="fontLoraBold"> Plate rotation </h1>
+                <p class="fontLoraSemiBold">
+                    During the planning stage, I highlighted the main components of the game. One such component was the plate rotation. Rotation is a 
+                    completely different kettle of fish to basic movement, which meant I needed to learn how to use units such as Quaternions to 
+                    rotate the plate to my liking. When creating the program to rotate the plate, I had came across the same problem multiple times – 
+                    gimbal lock. When a ball falls, I needed to rotate the plate 90 degrees. However, that plate would refuse to move. To remedy this 
+                    problem, I used Euler units to rotate my plate. When the program was finished, I had a plate that checked for mouse movement, clamped 
+                    the input if it exceeded a certain amount, and smoothly rotated the plate an appropriate amount.
+                </p>
+                <div class="inlineImageContainer">
+                    <img src="assets/images/WackoTiltSnippet1.png">
+                </div>
+                <h1 class="fontLoraBold"> Managers </h1>
+                <p class="fontLoraSemiBold"> 
+                    Whilst developing Wacko Tilt, I wanted to trial an idea I had thought up during the planning stage. The majority of games I had made 
+                    using Unity had scripts that were very large, as most objects were communicating with each other. In order to combat script size, I 
+                    wanted to try and make managers for Wacko Tilt. For example, all the plates present in Wacko Tilt communicate with a plate manager 
+                    if changes needed to be made. This manager then communicates with the game manager, that controls the game state and relays that 
+                    information elsewhere. I was quite pleased with how this turned out, so I decided to keep these managers in my final build.
+                </p>
+                <h1 class="fontLoraBold"> What have I learnt? </h1>
+                <p class=fontLoraSemiBold> 
+                    In this project, I gained a deeper understanding of rotation mechanics and the importance choosing the correct mathematical representation 
+                    for different scenarios. Working with Euler units helped me appreciate the complexity of 3D space and the difficulty of moving 
+                    objects within it. 
+                    <br>Additionally, with the limited timeframe, I learnt the value of iterative development. By experimenting 
+                    with different mechanics, I was able to refine specific ideas and streamline development time. This project showed to me the 
+                    importance of adaptability and my ability to solve problems.
+                </p>
+            </div>
+        </div>
     </body>
 </html>

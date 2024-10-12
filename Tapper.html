@@ -37,12 +37,18 @@
                     </video>
                 </div>
             </div>
+            <div class="githubLink">
+                <button class="githubButton" onclick="document.location='https://github.com/Joles-Doe/Tapper'">
+                    <img src="assets/images/github.png">
+                    <h1 class="fontLoraBold"> Link to Github </h1>
+                </button>
+            </div>
             <div class="pageContent">
                 <h1 class="fontLoraBold"> Introduction </h1>
                 <p class="fontLoraSemiBold">
                     Tapper was an idea brought about to demonstrate my C++ skills I had developed thus far. Using SDL as a basis for the graphics program, 
                     I built a small engine that functions on top of it and handles the game. Alongside this small engine, I wanted to build a game on top 
-                    as a small challenge. I gave myself a limited timeframe, to mimic a deadline as if I were employed in the games industry. I chose a simple 
+                    as a small challenge. I chose a simple 
                     arcade game mostly due to the fact that you could just turn it on and play it repetitively. To start, I identified the key components 
                     of the engine – taking inspiration from Unity, I had decided to create a system where each object had a function that would be automatically 
                     called by the engine each frame. Using this method makes the code look significantly shorter and cleaner from the engine side – but one problem 
@@ -56,12 +62,13 @@
                     initialized and constantly in memory, this method prevents memory leaks and automatically cleans up unneeded data from the program.
                 </p>
                 <h1 class="fontLoraBold"> Object automatic updates </h1>
-                <p class="fontLoraSemiBold"> With memory allocation out of the way, I decided to work on my game objects. Like unity, each object would need to inherit 
+                <p class="fontLoraSemiBold"> 
+                    With memory allocation out of the way, I decided to work on my game objects. Like unity, each object would need to inherit 
                     from a base class that included all the necessary functions that the engine may need to call. By using inheritance, I could use shared pointers 
                     of different classes but could still interact with each other as they all possessed the same abstract class. Upon initial design on the base class, 
                     there were two functions that were absolutely vital needed to be included – namely, update and draw. These functions needed to be virtual, 
                     as they would be overwritten by the inheritor. </p>
-                <h1 class="fontLoraBold"> Conclusion </h1>
+                <h1 class="fontLoraBold"> What have I learnt? </h1>
                 <p class=fontLoraSemiBold> 
                     In this project, I learnt efficient memory management, and how to apply object-oriented programming to a project. I gained a deeper understanding 
                     of the importance of breaking a program into steps. By planning individual modules in advance, the development of the engine and the game became substantially easier. 
