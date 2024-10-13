@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p, .fontLora, .fontLoraSemiBold, .fontLoraBold {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.fontLora {
+    font-weight: 400;
+}
+p, .fontLoraSemiBold{
+    font-weight: 500;
+    color: rgb(36, 36, 35);
+}
+h1, h2, .fontLoraBold {
+    font-weight: 700;
+    color: rgb(36, 36, 35);
+}
+
+body {
+    background-color: rgb(173, 202, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background-color: azure;
+    position: relative;
+    padding: 15px;
+    width: 1300px;
+}
+
+/* -- Title Section Styles -- */
+
+.title {
+    padding-bottom: 15vmin;
+    position: relative;
+    text-align: center;
+    font-size: 70px;
+    border-bottom: 2px solid black;
+}
+
+.titleContent {
+    padding-top: 10vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleContent > img {
+    border-radius: 50%;
+    width: 350px;
+}
+
+.titleContent > p {
+    max-width: 50vw;
+    padding-left: 30px;
+    font-size: 33px;
+}
+
+/* -- Projects Section Styles -- */
+
+.projects {
+    background-color: aqua;
+    padding: 2vmin;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vmin;
+}
+
+.projectsTitle {
+    padding: 1vmin;
+    font-size: 85px;
+    text-align: center;
+    width: 100%;
+}
+
+.projectContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    border: 2px solid black;
+}
+
+.projectMedia {
+    display: flex;
+    max-height: 65%;
+}
+
+.projectMedia > video, .projectMedia > img {
+    display: flex;
+    object-fit: contain;
+    object-position: 50% 0;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.projectContent {
+    background-color: inherit;
+    padding: 5px;
+    height: 35%;
+    width: 90%;
+}
+
+.projectContent > h1 {
+    font-size: 35px;
+}
+
+.projectContent > p {
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+/* -- About Me Section Styles -- */
+
+.aboutMe {
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+.aboutMeTitle {
+    text-align: center;
+    font-size: 35px;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+}
+
+.aboutMePages {
+    width: 70%;
+}
+
+.aboutMePages div > h1 {
+    font-size: 70px;
+}
+
+.aboutMePages div > p {
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.aboutMePageOne {
+    justify-content: space-evenly;
+}
+
+.aboutMePageOne, .aboutMePageTwo {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutMePageTwoImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2vmin;
+}
+
+.aboutMePageTwoImages > img {
+    width: 20%;
+    height: auto;
+}
+
+@media only screen and (min-width: 830px) and (max-width: 1299px) {
+    .main {
+        width: 100%;
+    }
+
+    /* -- Title Section Styles -- */
+
+    .title {
+        font-size: 65px;
+    }
+
+    .titleContent {
+        padding-top: 3vmin;
+        flex-direction: column;
+        gap: 2vmin;
+    }
+
+    .titleContent > img {
+        width: 300px;
+    }
+
+    .titleContent > p {
+        padding-left: 0vmin;
+        max-width: 600px;
+        font-size: 30px;
+    }
+
+    /* -- Projects Section Styles -- */
+
+    .projectsTitle {
+        font-size: 80px;
+    }
+
+    .projectContainer {
+        width: 370px;
+        height: 370px;
+    }
+
+    .projectContent > h1 {
+        font-size: 30px;
+    }
+
+    .projectContent > p {
+        font-size: 14px;
+        padding-top: 0px;
+    }
+
+    /* -- About Me Section Styles -- */
+
+    .aboutMeTitle {
+        font-size: 27px;
+    }
+
+    .aboutMePages div > h1 {
+        font-size: 70px;
+    }
+
+    .aboutMePages div > p {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 829px) {
+    .main {
+        padding: 0px;
+        width: 100%;
+    }
+
+    /* -- Title Section Styles -- */
+
+    .title {
+        font-size: 8vmin;
+    }
+
+    .titleContent {
+        padding-top: 3vmin;
+        flex-direction: column;
+        gap: 2vmin;
+    }
+
+    .titleContent > img {
+        width: 80vmin;
+    }
+
+    .titleContent > p {
+        padding-left: 0vmin;
+        max-width: 600px;
+        font-size: 6vmin;
+    }
+
+    /* -- Projects Section Styles -- */
+
+    .projectsTitle {
+        font-size: 12vmin;
+    }
+
+    .projectContainer {
+        width: 100vmin;
+        height: 100vmin;
+    }
+
+    .projectContent > h1 {
+        font-size: 7.5vmin;
+    }
+
+    .projectContent > p {
+        padding-top: 0px;
+        font-size: 3.5vmin;
+    }
+
+    /* -- About Me Section Styles -- */
+
+    .aboutMeTitle {
+        font-size: 4vmin;
+    }
+
+    .aboutMePages div > h1 {
+        font-size: 12vmin;
+    }
+
+    .aboutMePages div > p {
+        font-size: 4vmin;
+    }
+
+    .aboutMePageTwoIcon {
+        padding: 20px;
+        width: 30%;
+        height: auto;
+    }
+}

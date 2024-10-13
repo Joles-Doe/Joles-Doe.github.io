@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/style/stylesheet.css">
+        <link rel="stylesheet" href="assets/style/MainStylesheet.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/jquery.ScrollMagic.min.js"></script>
@@ -31,12 +31,12 @@
             <!-- Divs in this indent are NOT flex -->
             <div class="title">
                 <noscript>
-                    <h1 class="fontLoraBold"> This Portfolio does not work correctly without Javascript! Please enable it and reload. </h1>
+                    <h1> This Portfolio does not work correctly without Javascript! Please enable it and reload. </h1>
                 </noscript>
-                <h1 class="fontLoraBold"> Scott Lewis </h1>
+                <h1> Scott Lewis </h1>
                 <div class="titleContent">
-                    <img src="assets/images/placeholder.png" class="titleImage">
-                    <p class="fontLoraSemiBold titleText">
+                    <img src="assets/images/placeholder.png">
+                    <p>
                         Passionate games programmer dedicated to creating engaging gaming experiences, 
                         with a keen interest in back-end development.
                     </p>
@@ -46,71 +46,85 @@
             <div class="projects">
                 <h1 class="projectsTitle"> My Projects </h1>
                 <button class="projectContainer" onclick="document.location='Tapper.html'">
-                    <video class="projectVideo" autoplay muted loop>
-                        <source src="assets/videos/Tapper.mp4" type="video/mp4">
-                    </video>
+                    <div class="projectMedia">
+                        <video autoplay muted loop>
+                            <source src="assets/videos/Tapper.mp4" type="video/mp4">
+                        </video>
+                    </div>
                     <div class="projectContent">
-                        <h1 class="fontLoraBold"> Tapper </h1>
-                        <p class="fontLoraSemiBold">Made using SDL, this recreation of the classic arcade game features 
+                        <h1> Tapper </h1>
+                        <p> 
+                            Made using SDL, this recreation of the classic arcade game features 
                             it's own game engine that uses shared pointers to control memory and update game elements.
                         </p>
                     </div>
                 </button>
                 <button class="projectContainer" onclick="document.location='WackoTilt.html'">
-                    <video class="projectVideo" autoplay muted loop>
-                        <source src="assets/videos/WackoTilt.mp4" type="video/mp4">
-                    </video>
+                    <div class="projectMedia">
+                        <video autoplay muted loop>
+                            <source src="assets/videos/WackoTilt.mp4" type="video/mp4">
+                        </video>
+                    </div>
                     <div class="projectContent">
-                        <h1 class="fontLoraBold"> Wacko Tilt </h1>
-                        <p class="fontLoraSemiBold"> An effort to recreate one of my favourite Wii Fit minigames by myself, 
-                            Wacko Tilt is a representation of my Unity skills whilst under a short time constraint. </p>
+                        <h1> Wacko Tilt </h1>
+                        <p> 
+                            An effort to recreate one of my favourite Wii Fit minigames by myself, 
+                            Wacko Tilt is a representation of my Unity skills whilst under a short time constraint.
+                        </p>
                     </div>
                 </button>
                 <button class="projectContainer" onclick="document.location='FerociousFruits.html'">
-                    <video class="projectVideo" autoplay muted loop>
-                        <source src="assets/videos/FerociousFruits.mp4">
-                    </video>
+                    <div class="projectMedia">
+                        <video autoplay muted loop>
+                            <source src="assets/videos/FerociousFruits.mp4">
+                        </video>
+                    </div>
                     <div class="projectContent">
-                        <h1 class="fontLoraBold"> University Resource Manager </h1>
-                        <p class="fontLoraSemiBold"> Created during a weeklong Codejam at Bournemouth University, 
-                            this project was created by a team of four and features a low-poly recreation of the University's Talbot Campus. </p>
+                        <h1> University Resource Manager </h1>
+                        <p> 
+                            Created during a weeklong Codejam at Bournemouth University, 
+                            this project was created by a team of four and features a low-poly recreation of the University's Talbot Campus.
+                        </p>
                     </div>
                 </button>
                 <button class="projectContainer" onclick="document.location='Connect4.html'">
-                    <video class="projectVideo" autoplay muted loop>
-                        <source src="assets/videos/Connect4.mp4">
-                    </video>
+                    <div class="projectMedia">
+                        <video autoplay muted loop>
+                            <source src="assets/videos/Connect4.mp4">
+                        </video>
+                    </div>
                     <div class="projectContent">
-                        <h1 class="fontLoraBold"> Connect 4 </h1>
-                        <p class="fontLoraSemiBold"> Created before University, this recreation made using Pygame served as a small refresher for my programming skills 
-                            before I had ventured into University. </p>
+                        <h1> Connect 4 </h1>
+                        <p> 
+                            Created before University, this recreation made using Pygame served as a small refresher for my programming skills 
+                            before I had ventured into University.
+                        </p>
                     </div>
                 </button>
                 <button class="projectContainer" onclick="document.location='PasswordManager.html'">
-                    <video class="projectVideo" autoplay muted loop>
-                        <source src="assets/videos/PasswordManager.mp4">
-                    </video>
+                    <div class="projectMedia">
+                        <video autoplay muted loop>
+                            <source src="assets/videos/PasswordManager.mp4">
+                        </video>
+                    </div>
                     <div class="projectContent">
-                        <h1 class="fontLoraBold"> Password Manager </h1>
-                        <p class="fontLoraSemiBold"> Created before University, this password manager made in Pygame represented my brief interest
-                            in Cybersecurity. </p>
+                        <h1> Password Manager </h1>
+                        <p> 
+                            Created before University, this password manager made in Pygame represented my brief interest
+                            in Cybersecurity.
+                        </p>
                     </div>
                 </button>
             </div>
-            
-                <!-- <div class="projectImages">
-                    <img src="assets/images/placeholder_large.png" class="image" draggable="false">
-                    <button onclick="document.location='FerociousFruits.html'"></button>
-                </div> -->
 
             <div class="aboutMe">
                 <div class="aboutMeTitle">
-                    <h2 class="fontLoraBold"> About Me </h2>
+                    <h1> About Me </h1>
                 </div>
                 <div class="aboutMePages">
                     <div class="aboutMePageOne">
-                        <h2 class="fontLoraBold"> Who am I? </h2>
-                        <p class="fontLoraSemiBold">
+                        <h1> Who am I? </h1>
+                        <p>
                             <br>
                             I'm Scott - a student in Bournemouth University currently on his second year. My love for the gaming
                             industry has brought me to study Games Development. I've always been fascinated in the inner workings
@@ -125,7 +139,7 @@
                         </p>
                     </div>
                     <div class="aboutMePageTwo">
-                        <h2 class="fontLoraSemiBold" style="margin-bottom: -80px;"> My Skills </h2>
+                        <h1> My Skills </h1>
                         <div class="aboutMePageTwoImages">
                             <img src="assets/images/c++.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/csharp.png" class="aboutMePageTwoIcon">

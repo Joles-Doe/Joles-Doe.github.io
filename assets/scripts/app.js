@@ -1,17 +1,29 @@
 function SplitScroll() {
     const scrollController = new ScrollMagic.Controller();
 
-    new ScrollMagic.Scene({
-        duration: '100%',
+    var container = document.querySelector('.aboutMe');
+    var containerHeight = container.offsetHeight;
+
+    var scrollScene = new ScrollMagic.Scene({
+        duration: containerHeight,
         triggerElement: '.aboutMeTitle',
         triggerHook: 0
     })
     .setPin('.aboutMeTitle')
-    .addTo(scrollController);
+    .addTo(scrollController)
+}
+
+function UpdateDuration() {
+    var container = document.querySelector('.aboutMe');
+    var containerHeight = container.offsetHeight;
+    scrollScene.duration(containerHeight);
 }
 
 $(document).ready(function() {
     SplitScroll();
+    window.addEventListener('resize', function() {
+        UpdateDuration();
+    })
 });
 
 
