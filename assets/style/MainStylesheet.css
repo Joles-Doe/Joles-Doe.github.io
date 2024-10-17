@@ -13,22 +13,30 @@ h1, h2, p, .fontLora, .fontLoraSemiBold, .fontLoraBold {
 }
 p, .fontLoraSemiBold{
     font-weight: 500;
-    color: rgb(36, 36, 35);
+    color: rgb(108, 84, 58);
 }
 h1, h2, .fontLoraBold {
     font-weight: 700;
-    color: rgb(36, 36, 35);
+    color: rgb(140, 74, 48);
 }
 
 body {
-    background-color: rgb(173, 202, 214);
+    background-color:rgb(93, 107, 86);
+    background-image:
+    radial-gradient(circle at 100% 150%, rgb(93, 107, 86) 24%, rgb(69, 50, 32) 24%, rgb(69, 50, 32) 28%, rgb(93, 107, 86) 28%, rgb(93, 107, 86) 36%, rgb(69, 50, 32) 36%, rgb(69, 50, 32) 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0    150%, rgb(93, 107, 86) 24%, rgb(69, 50, 32) 24%, rgb(69, 50, 32) 28%, rgb(93, 107, 86) 28%, rgb(93, 107, 86) 36%, rgb(69, 50, 32) 36%, rgb(69, 50, 32) 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50%  100%, rgb(69, 50, 32) 10%, rgb(93, 107, 86) 10%, rgb(93, 107, 86) 23%, rgb(69, 50, 32) 23%, rgb(69, 50, 32) 30%, rgb(93, 107, 86) 30%, rgb(93, 107, 86) 43%, rgb(69, 50, 32) 43%, rgb(69, 50, 32) 50%, rgb(93, 107, 86) 50%, rgb(93, 107, 86) 63%, rgb(69, 50, 32) 63%, rgb(69, 50, 32) 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, rgb(69, 50, 32) 5%, rgb(93, 107, 86) 5%, rgb(93, 107, 86) 15%, rgb(69, 50, 32) 15%, rgb(69, 50, 32) 20%, rgb(93, 107, 86) 20%, rgb(93, 107, 86) 29%, rgb(69, 50, 32) 29%, rgb(69, 50, 32) 34%, rgb(93, 107, 86) 34%, rgb(93, 107, 86) 44%, rgb(69, 50, 32) 44%, rgb(69, 50, 32) 49%, transparent 49%, transparent),
+    radial-gradient(circle at 0    50%, rgb(69, 50, 32) 5%, rgb(93, 107, 86) 5%, rgb(93, 107, 86) 15%, rgb(69, 50, 32) 15%, rgb(69, 50, 32) 20%, rgb(93, 107, 86) 20%, rgb(93, 107, 86) 29%, rgb(69, 50, 32) 29%, rgb(69, 50, 32) 34%, rgb(93, 107, 86) 34%, rgb(93, 107, 86) 44%, rgb(69, 50, 32) 44%, rgb(69, 50, 32) 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+    /* Background pattern courtesy of https://projects.verou.me/css3patterns/ */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main {
-    background-color: azure;
+    background-color: rgb(189, 189, 160);
     position: relative;
     padding: 15px;
     width: 1300px;
@@ -82,6 +90,12 @@ body {
 }
 
 .projectContainer {
+    background-color: rgb(224, 224, 195);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
     padding: 5px;
     position: relative;
     display: flex;
@@ -92,22 +106,26 @@ body {
     border: 2px solid black;
 }
 
+.projectContainer:hover {
+    background-color: rgb(218, 218, 208);
+}
+
 .projectMedia {
     display: flex;
     max-height: 65%;
 }
 
 .projectMedia > video, .projectMedia > img {
+    background-color: rgb(212, 192, 161);
     display: flex;
     object-fit: contain;
     object-position: 50% 0%;
-    
     width: 100%;
     height: 100%;
 }
 
 .projectContent {
-    background-color: inherit;
+    background-color: transparent;
     padding: 5px;
     height: 35%;
     width: 90%;
@@ -222,7 +240,7 @@ body {
     }
 
     .projectContent > p {
-        font-size: 14px;
+        font-size: 13px;
         padding-top: 0px;
     }
 

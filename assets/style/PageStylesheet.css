@@ -18,9 +18,18 @@
 }
 
 .returnButton {
+    background-color: rgb(224, 224, 195);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
     position: relative;
-    background-color: burlywood;
     padding: 1vmin;
+}
+
+.returnButton:hover {
+    background-color: rgb(212, 192, 161);
 }
 
 .returnButton > h1 {
@@ -58,9 +67,18 @@
 }
 
 .githubButton {
+    background-color: rgb(224, 224, 195);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
     display: flex;
-    background-color: burlywood;
     padding: 1vmin;
+}
+
+.githubButton:hover {
+    background-color: rgb(212, 192, 161);
 }
 
 .githubButton > img {
