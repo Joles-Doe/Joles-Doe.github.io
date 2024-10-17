@@ -66,7 +66,6 @@ body {
 /* -- Projects Section Styles -- */
 
 .projects {
-    background-color: aqua;
     padding: 2vmin;
     border-bottom: 2px solid black;
     display: flex;
@@ -83,6 +82,7 @@ body {
 }
 
 .projectContainer {
+    padding: 5px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -100,8 +100,8 @@ body {
 .projectMedia > video, .projectMedia > img {
     display: flex;
     object-fit: contain;
-    object-position: 50% 0;
-    padding: 5px;
+    object-position: 50% 0%;
+    
     width: 100%;
     height: 100%;
 }
@@ -125,7 +125,6 @@ body {
 /* -- About Me Section Styles -- */
 
 .aboutMe {
-    background-color: blanchedalmond;
     display: flex;
 }
 
@@ -159,8 +158,9 @@ body {
 }
 
 .aboutMePageOne, .aboutMePageTwo {
-    background-color: aquamarine;
     display: flex;
+    flex: 0 1 auto;
+    max-height: 100%;
     flex-direction: column;
     align-items: center;
 }

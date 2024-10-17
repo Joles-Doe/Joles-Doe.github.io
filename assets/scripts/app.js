@@ -11,18 +11,20 @@ function SplitScroll() {
     })
     .setPin('.aboutMeTitle')
     .addTo(scrollController)
+
+    return scrollScene;
 }
 
-function UpdateDuration() {
+function UpdateDuration(scrollScene) {
     var container = document.querySelector('.aboutMe');
     var containerHeight = container.offsetHeight;
     scrollScene.duration(containerHeight);
 }
 
 $(document).ready(function() {
-    SplitScroll();
+    var scrollScene = SplitScroll();
     window.addEventListener('resize', function() {
-        UpdateDuration();
+        UpdateDuration(scrollScene);
     })
 });
 
