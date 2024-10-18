@@ -116,11 +116,11 @@
 }
 
 .subtitleText {
-    padding-left: 1.5vmin;
-    padding-right: 1.5vmin
+    padding-left: 2vmin;
+    padding-right: 2vmin
 }
 
-.inlineImageContainer {
+.inlineMediaContainer {
     padding: 2vmin;
     gap: 2vmin;
     display: flex;
@@ -128,11 +128,11 @@
     justify-content: center;
 }
 
-.inlineImageContainer > img {
+.inlineMediaContainer > img, .inlineMediaContainer > video {
     max-width: 45vw;
 }
 
-.singleImage > img {
+.singleMedia > img, .singleMedia > video {
     max-width: 70vw;
 }
 
@@ -200,15 +200,15 @@
         font-size: 6vmin;
     }
 
-    .inlineImageContainer {
+    .inlineMediaContainer {
         gap: 0;
     }
 
-    .inlineImageContainer > img {
+    .inlineMediaContainer > img {
         max-width: 70vw;
     }
     
-    .singleImage > img {
+    .singleMedia > img {
         max-width: 95vw;
     }
 }
