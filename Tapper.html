@@ -23,13 +23,13 @@
         <div class="main">
             <div class="pageTitle">
                 <noscript>
-                    <h1 class="fontLoraBold"> This page may not work correctly without Javascript! Please enable it and reload. </h1>
+                    <h1> This page may not work correctly without Javascript! Please enable it and reload. </h1>
                 </noscript>
-                <h1 class="fontLoraBold"> Tapper </h1>
+                <h1> Tapper </h1>
             </div>
             <div class="returnSection">
                 <button class="returnButton" onclick="document.location='index.html'">
-                    <h1 class="fontLoraBold"> Return to Homepage </h1>
+                    <h1> Return to Homepage </h1>
                 </button>
             </div>
             <div class="titleVideo">
@@ -40,14 +40,14 @@
                 </div>
             </div>
             <div class="githubLink">
-                <button class="githubButton" onclick="document.location='https://github.com/Joles-Doe/Tapper'">
+                <button class="githubButton" onclick="window.open('https://github.com/Joles-Doe/Tapper', '_blank')">
                     <img src="assets/images/github.png">
-                    <h1 class="fontLoraBold"> Link to Github </h1>
+                    <h1> Link to Github </h1>
                 </button>
             </div>
             <div class="pageContent">
-                <h1 class="fontLoraBold"> Introduction </h1>
-                <p class="fontLoraSemiBold">
+                <h1> Introduction </h1>
+                <p>
                     Tapper was an idea brought about to demonstrate my C++ skills I had developed thus far. Using SDL as a basis for the graphics program, 
                     I built a small engine that functions on top of it and handles the game. Alongside this small engine, I wanted to build a game on top 
                     as a small challenge. I chose a simple 
@@ -56,21 +56,21 @@
                     called by the engine each frame. Using this method makes the code look significantly shorter and cleaner from the engine side – but one problem 
                     persisted. If I needed to delete an object, how would I go about removing it from the engine hierarchy without hardcoding variable names into the engine?
                 </p>
-                <h1 class="fontLoraBold"> Pointers </h1>
-                <p class="fontLoraSemiBold">
+                <h1> Pointers </h1>
+                <p>
                     Through my research, I had discovered a particular pointer that would be integral to the engine – shared pointers. These pointers share 
                     an object and have in-built methods to check if the object they’re pointing to is unique. These pointers gave me an idea – what if, before I 
                     updated every object in my hierarchy, I check if the pointer is unique? If so, remove it and the object from memory. As the engine is always 
                     initialized and constantly in memory, this method prevents memory leaks and automatically cleans up unneeded data from the program.
                 </p>
-                <h1 class="fontLoraBold"> Object automatic updates </h1>
-                <p class="fontLoraSemiBold"> 
+                <h1> Object automatic updates </h1>
+                <p> 
                     With memory allocation out of the way, I decided to work on my game objects. Like unity, each object would need to inherit 
                     from a base class that included all the necessary functions that the engine may need to call. By using inheritance, I could use shared pointers 
                     of different classes but could still interact with each other as they all possessed the same abstract class. Upon initial design on the base class, 
                     there were two functions that were absolutely vital needed to be included – namely, update and draw. These functions needed to be virtual, 
                     as they would be overwritten by the inheritor. </p>
-                <h1 class="fontLoraBold"> What have I learnt? </h1>
+                <h1> What have I learnt? </h1>
                 <p class=fontLoraSemiBold> 
                     In this project, I learnt efficient memory management, and how to apply object-oriented programming to a project. I gained a deeper understanding 
                     of the importance of breaking a program into steps. By planning individual modules in advance, the development of the engine and the game became substantially easier. 

@@ -105,9 +105,19 @@
     font-size: 65px;
 }
 
+.pageContent > h2 {
+    padding: 1vmin;
+    font-size: 45px;
+}
+
 .pageContent > p {
     font-size: 25px;
     line-height: 1.4;
+}
+
+.subtitleText {
+    padding-left: 1.5vmin;
+    padding-right: 1.5vmin
 }
 
 .inlineImageContainer {
@@ -180,6 +190,10 @@
 
     .pageContent > h1 {
         font-size: 12vmin;
+    }
+
+    .pageContent > h2 {
+        font-size: 10vmin;
     }
 
     .pageContent > p {
