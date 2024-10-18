@@ -15,19 +15,22 @@ function SplitScroll() {
     return scrollScene;
 }
 
-function UpdateDuration(scrollScene) {
-    var container = document.querySelector('.aboutMe');
-    var containerHeight = container.offsetHeight;
-    scrollScene.duration(containerHeight);
-}
-
 $(document).ready(function() {
     var scrollScene = SplitScroll();
     window.addEventListener('resize', function() {
-        UpdateDuration(scrollScene);
+        if (scrollScene)
+        {
+            scrollScene.destroy(true);
+        }
+        scrollScene = SplitScroll();
     })
 });
 
+// function UpdateDuration(scrollScene) {
+//     var container = document.querySelector('.aboutMe');
+//     var containerHeight = container.offsetHeight;
+//     scrollScene.duration(containerHeight);
+// }
 
 
 // const track = document.getElementById("projectImageTrack")
