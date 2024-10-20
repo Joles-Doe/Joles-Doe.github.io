@@ -136,6 +136,10 @@
     max-width: 70vw;
 }
 
+.largerMedia > img, .largerMedia > video {
+    max-width: 1300px;
+}
+
 @media only screen and (min-width: 830px) and (max-width: 1299px){
     .pageTitle {
         font-size: 60px;
@@ -155,6 +159,10 @@
 
     .titleVideoContainer {
         max-height: 400px;
+    }
+
+    .largerMedia > img, .largerMedia > video {
+        max-width: 825px;
     }
 }
 
@@ -209,6 +217,10 @@
     }
     
     .singleMedia > img {
+        max-width: 95vw;
+    }
+
+    .largerMedia > img, .largerMedia > video {
         max-width: 95vw;
     }
 }

@@ -48,19 +48,76 @@
                 <div class="pageContent">
                     <h1> Introduction </h1>
                     <p>
-                        Text
+                        After tinkering around with Pygame during my time in Highschool and College, I wanted to make a small 
+                        game to refresh my programming skills before I began University. After thinking about which game I wanted 
+                        to make, I decided on Connect 4. I wanted to try something I hadn’t done before at that point, so I had 
+                        decided to add online play functionality to the game.
                     </p>
-                    <h1> Point 1 </h1>
+                    <h1> Game Logic </h1>
                     <p>
-                        Text
+                        The goal of Connect 4 is self-explanatory - get 4 counters in a row, diagonally or orthogonally, 
+                        and you win. The challenge here was to create a function that grabbed each counter location and checked 
+                        if any matching counters were nearby. To get started, I organised the board into a dictionary, with each 
+                        row acting as a key. I put this into a function that resets the grid each time a new round starts.
                     </p>
-                    <h1> Point 2 </h1>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/Connect4Snippet1.png">
+                    </div>
+                    <p>
+                        Next, I have the player pick a column to place their counter in. This function quickly checks if the 
+                        column is full or invalid. If the counter can be placed in that column, 
+                        the function places it in the furthest row it can.
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/Connect4Snippet2.png">
+                    </div>
+                    <p>
+                        Once the counter is placed, the player's turn ends, and the next player gets to place a counter. Before the 
+                        turn is transferred to the other player, the program checks if the player just gone has won. First, it checks the diagonals — 
+                        the program splits the board into 3 sections. In the left section, the program checks if there are four counters together, 
+                        moving from left to right. In the right section, it checks for four counters moving from right to left. In the middle section, 
+                        it does both. I decided to do it this way primarily since in the left and right sections, it’s only for there to be four in a 
+                        row in one direction. By limiting the direction the program checks, I reduce the amount of checking the program must do.
+                    </p>
+                    <div class="inlineMediaContainer largerMedia">
+                        <img src="assets/images/Connect4Snippet3.png">
+                        <img src="assets/images/Connect4Snippet4.png">
+                        <img src="assets/images/Connect4Snippet5.png">
+                    </div>
+                    <p>
+                        Finally, the program completes the vertical and horizontal checks. This uses string concatenation instead of counters, and if it 
+                        identifies that there’s 4 of the same letter in the string, returns true.
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/Connect4Snippet6.png">
+                    </div>
+                    <h1> Online Play </h1>
                     <p> 
-                        Text     
+                        I briefly mentioned in the introduction that I wanted to add online play to the game. This was my first time using networking 
+                        of any kind, so trying to find what to use ended up being a bit of a struggle. I decided to have each program create HTTP 
+                        requests to a key store, giving the impression that there was online play. The key store would hold the grid and whose turn 
+                        it was. Every so often, each program would request the data from the key store and check the turn. If it was their turn, 
+                        download the new grid and take their turn.
+                        <br><br>
+                        When the host creates a game, they’re given an ID. This ID is the key to a part of the keystore, where the information will be passed in between players.
                     </p>
-                    <h1> Conclusion </h1>
-                    <p class=fontLoraSemiBold> 
-                        Text
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/Connect4Snippet7.png">
+                    </div>
+                    <p>
+                        One huge problem here was that Windows mistook the waiting phase of the program as not responding. To remedy this, 
+                        I had Pygame pump events until the other player eventually joined the game.
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/Connect4Snippet8.png">
+                    </div>
+                    <p>
+                        The main game loop functionally remained the same. If it wasn’t their turn, the program would just keep patiently pumping events until the data was passed back over.
+                    </p>
+                    <h1> What did I learn? </h1>
+                    <p> 
+                        In this project, I learnt the basics of networking and the management of events in a game engine. Designing the game logic helped 
+                        improve my problem-solving skills; I utilised these skills to structure functions for checking if a player has won and other game states.
                     </p>
                 </div>
             </div>
