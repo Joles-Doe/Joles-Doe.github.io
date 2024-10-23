@@ -198,7 +198,7 @@ body {
     border-bottom: 2px solid black;
 }
 
-.aboutMeTitle {
+#aboutMeTitle {
     text-align: center;
     font-size: 35px;
     width: 30%;
@@ -207,29 +207,30 @@ body {
     justify-content: center;
     align-items: center;
     border-right: 2px solid black;
+    position: sticky;
 }
 
-.aboutMePages {
+#aboutMePages {
     width: 70%;
 }
 
-.aboutMePages div > h1 {
-    font-size: 70px;
+#aboutMePages div > h1 {
+    font-size: 80px;
 }
 
-.aboutMePages div > p {
+#aboutMePages div > p {
     width: 90%;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.6;
     padding-top: 2vmin;
     padding-bottom: 2vmin;
 }
 
-.aboutMePageOne {
+#aboutMePageOne {
     justify-content: space-evenly;
 }
 
-.aboutMePageOne, .aboutMePageTwo {
+#aboutMePageOne, #aboutMePageTwo {
     display: flex;
     flex: 0 1 auto;
     max-height: 100%;
@@ -247,7 +248,7 @@ body {
 }
 
 .aboutMePageTwoImages > img {
-    width: 17%;
+    width: 20%;
     height: auto;
 }
 
@@ -292,6 +293,7 @@ body {
 .contactMedia {
     padding: 5px;
     max-width: 40%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -380,16 +382,8 @@ body {
 
     /* -- About Me Section Styles -- */
 
-    .aboutMeTitle {
+    #aboutMeTitle {
         font-size: 27px;
-    }
-
-    .aboutMePages div > h1 {
-        font-size: 70px;
-    }
-
-    .aboutMePages div > p {
-        font-size: 17px;
     }
 
     /* -- Contact Me Section Styles -- */
@@ -430,7 +424,7 @@ body {
         flex-wrap: wrap;
         width: 20vmin;
         align-items: center;
-        font-size: 5vmin;
+        font-size: 3.7vmin;
     }
     
     .navbarButtons {
@@ -495,15 +489,15 @@ body {
 
     /* -- About Me Section Styles -- */
 
-    .aboutMeTitle {
+    #aboutMeTitle {
         font-size: 4vmin;
     }
 
-    .aboutMePages div > h1 {
+    #aboutMePages div > h1 {
         font-size: 12vmin;
     }
 
-    .aboutMePages div > p {
+    #aboutMePages div > p {
         font-size: 4vmin;
     }
 
