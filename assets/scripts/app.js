@@ -1,49 +1,8 @@
-//Function to add the ScrollMagic sticky section
-function SplitScroll() {
-    const scrollController = new ScrollMagic.Controller();
-
-    var pagesHeight = document.getElementById('aboutMePages').offsetHeight;
-    var containerHeight = document.getElementById('aboutMeTitle').offsetHeight;
-
-    var scrollScene = new ScrollMagic.Scene({
-        duration: pagesHeight - containerHeight,
-        triggerElement: '#aboutMeTitle',
-        triggerHook: 0
-    })
-    .setPin('#aboutMeTitle')
-    .addTo(scrollController)
-    .addIndicators()
-
-    return scrollScene;
-}
-
-//The aboutme div likes to create whitespace, so this function gives it an absolute height
-function ResizeAboutMe() {
-    var pageOneHeight = document.getElementById('aboutMePageOne').offsetHeight;
-    var pageTwoHeight = document.getElementById('aboutMePageTwo').offsetHeight;
-
-    var aboutMe = document.getElementById('aboutMe');
-    var aboutMePages = document.getElementById('aboutMePages');
-    aboutMe.style.height = pageOneHeight + pageTwoHeight + 'px';
-    aboutMePages.style.height = pageOneHeight + pageTwoHeight + 'px'; 
-
-    var aboutMeTitle = document.getElementById('aboutMeTitle');
-    aboutMeTitle.style.maxHeight = aboutMe.style.height; 
-}
-
 $(document).ready(function() {
-    ResizeAboutMe();
-    var scrollScene = SplitScroll();
+    //Calculates size of the navbar
     var navbarHeight = document.getElementById('navbar').offsetHeight;
-
     window.addEventListener('resize', function() {
         navbarHeight = document.getElementById('navbar').offsetHeight;
-        if (scrollScene)
-        {
-            scrollScene.destroy(true);
-        }
-        ResizeAboutMe();
-        scrollScene = SplitScroll();
     })
 
     //Event listeners for the navbar buttons
@@ -86,14 +45,3 @@ $(document).ready(function() {
         window.location.href = `mailto:${email}`;
     });
 });
-
-// window.onload = function() {
-//     ResizeAboutMe();
-//     navbarHeight = document.getElementById('navbar').offsetHeight;
-//     if (scrollScene)
-//     {
-//         scrollScene.destroy(true);
-//     }
-//     ResizeAboutMe();
-//     scrollScene = SplitScroll();
-// };
