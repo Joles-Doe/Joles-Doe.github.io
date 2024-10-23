@@ -26,6 +26,9 @@ function ResizeAboutMe() {
     var aboutMePages = document.getElementById('aboutMePages');
     aboutMe.style.height = pageOneHeight + pageTwoHeight + 'px';
     aboutMePages.style.height = pageOneHeight + pageTwoHeight + 'px'; 
+
+    var aboutMeTitle = document.getElementById('aboutMeTitle');
+    aboutMeTitle.style.maxHeight = aboutMe.style.height; 
 }
 
 $(document).ready(function() {
@@ -83,3 +86,14 @@ $(document).ready(function() {
         window.location.href = `mailto:${email}`;
     });
 });
+
+// window.onload = function() {
+//     ResizeAboutMe();
+//     navbarHeight = document.getElementById('navbar').offsetHeight;
+//     if (scrollScene)
+//     {
+//         scrollScene.destroy(true);
+//     }
+//     ResizeAboutMe();
+//     scrollScene = SplitScroll();
+// };
