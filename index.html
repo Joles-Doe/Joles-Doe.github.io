@@ -28,13 +28,35 @@
 
     <body>
         <div class="main">
-            <div class="title">
-                <noscript>
-                    <h1> This Portfolio does not work correctly without Javascript! Please enable it and reload. </h1>
-                </noscript>
-                <h1> Scott Lewis </h1>
+            <noscript>
+                <h1> This Portfolio does not work correctly without Javascript! Please enable it and reload. </h1>
+            </noscript>
+
+            <div id="navbar">
+                <div class="navbarTitle">
+                    <h1>
+                        Scott Lewis
+                    </h1>
+                </div>
+                <div class="navbarButtons">
+                    <button id="titleButton">
+                        <h1> Title </h1>
+                    </button>
+                    <button id="projectsButton">
+                        <h1> Projects </h1>
+                    </button>
+                    <button id="aboutmeButton">
+                        <h1> About</h1>
+                    </button>
+                    <button id="contactmeButton">
+                        <h1> Contact </h1>
+                    </button>
+                </div>
+            </div>
+
+            <div id="title">
                 <div class="titleContent">
-                    <img src="assets/images/placeholder.png">
+                    <img src="assets/images/headshot.jpg">
                     <p>
                         Passionate games programmer dedicated to creating engaging gaming experiences, 
                         with a keen interest in back-end development.
@@ -42,7 +64,7 @@
                 </div>
             </div>
             
-            <div class="projects">
+            <div id="projects">
                 <h1 class="projectsTitle"> My Projects </h1>
                 <button class="projectContainer" onclick="document.location='Tapper.html'">
                     <div class="projectMedia">
@@ -116,7 +138,7 @@
                 </button>
             </div>
 
-            <div class="aboutMe">
+            <div id="aboutMe">
                 <div class="aboutMeTitle">
                     <h1> About Me </h1>
                 </div>
@@ -124,32 +146,53 @@
                     <div class="aboutMePageOne">
                         <h1> Who am I? </h1>
                         <p>
-                            <br>
-                            I'm Scott - a student in Bournemouth University currently on his second year. My love for the gaming
-                            industry has brought me to study Games Development. I've always been fascinated in the inner workings
-                            of a game - how certain technologies have been brought about in order to showcase our genius and creativity.
+                            I'm Scott - a student in Bournemouth University currently on his second year. My love for gaming
+                            has brought me to study Games Development. I've always been fascinated in the inner workings
+                            of a game - how certain technologies have been brought about by our genius and creativity.
                             <br><br>
-                            When I was a child, I took up programming as a small hobby to pass the time.
-                            Nothing too serious, just small Scratch projects, but enough to pique my interest. From highschool, I moved onto Python,
-                            creating small programs in order to get to grips with text-based languages. But I didn't want to just program - I wanted
-                            to make games. My search in that aspect led me to Pygame, where I showcased the majority of my skills into making small games.
-                            From college, I kept using pygame, progressively making more and more complex games whilst learning other languages on the side.
-                            That brings me to now - a hopeful academic who hopes to make a difference in the gaming world when he leaves University.
+                            I like to describe myself as someone who’s willing to do anything. I’ve tinkered with computers, 
+                            created tools to edit data in spreadsheets, and I’ve even been a Rides Operator at Chessington 
+                            World of Adventures! I like to dedicate myself to something, knowing that doing so will improve 
+                            my drive for success and I’ll end up learning important skills I’ll take with me into the future.
                         </p>
                     </div>
                     <div class="aboutMePageTwo">
                         <h1> My Skills </h1>
+                        <p>
+                            While I primarily program in and am the most confident in C++, C#, and Python, I have some 
+                            experience in other languages, such as Javascript and Lua. I am familiar with using libraries 
+                            such as SDL and Pygame and enjoy creating games in specialised game engines like Unreal Engine and Unity.
+                        </p>
                         <div class="aboutMePageTwoImages">
                             <img src="assets/images/c++.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/csharp.png" class="aboutMePageTwoIcon">
-                            <img src="assets/images/sdl.png" class="aboutMePageTwoIcon">
-                            <img src="assets/images/github.png" class="aboutMePageTwoIcon">
-                            <img src="assets/images/pygame.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/python.png" class="aboutMePageTwoIcon">
+                            <img src="assets/images/github.png" class="aboutMePageTwoIcon">
+                            <img src="assets/images/sdl.png" class="aboutMePageTwoIcon">
+                            <img src="assets/images/pygame.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/unity.png" class="aboutMePageTwoIcon">
                             <img src="assets/images/unreal.png" class="aboutMePageTwoIcon">
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="contactMe">
+                <h1>
+                    Contact Me
+                </h1>
+                <p>
+                    Looking to get in touch? Great! You can reach me with one the methods below:
+                </p>
+                <div class="contactMeButtons">
+                    <button class="contactContainer" onclick="window.open('https://www.linkedin.com/in/sc0tt-lewis/', '_blank')">
+                        <img class="contactMedia" src="assets/images/linkedin.png">
+                        <h1> LinkedIn </h1>
+                    </button>
+                    <button id="emailContainer">
+                        <img class="contactMedia" src="assets/images/email.png">
+                        <h1> Email </h1>
+                    </button>
                 </div>
             </div>
         </div>

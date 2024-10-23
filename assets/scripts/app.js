@@ -1,7 +1,7 @@
 function SplitScroll() {
     const scrollController = new ScrollMagic.Controller();
 
-    var container = document.querySelector('.aboutMe');
+    var container = document.querySelector('#aboutMe');
     var containerHeight = container.offsetHeight;
 
     var scrollScene = new ScrollMagic.Scene({
@@ -17,13 +17,54 @@ function SplitScroll() {
 
 $(document).ready(function() {
     var scrollScene = SplitScroll();
+    var navbarHeight = document.getElementById('navbar').offsetHeight;
+
     window.addEventListener('resize', function() {
+        navbarHeight = document.getElementById('navbar').offsetHeight;
         if (scrollScene)
         {
             scrollScene.destroy(true);
         }
         scrollScene = SplitScroll();
     })
+
+    document.getElementById('titleButton').addEventListener('click', function() {
+        const target = document.getElementById('title');
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        window.scrollTo({
+            top: targetPosition,
+            behaviour: 'smooth'
+        })
+    });
+    document.getElementById('projectsButton').addEventListener('click', function() {
+        const target = document.getElementById('projects');
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - (navbarHeight + 5);
+        window.scrollTo({
+            top: targetPosition,
+            behaviour: 'smooth'
+        })
+    });
+    document.getElementById('aboutmeButton').addEventListener('click', function() {
+        const target = document.getElementById('aboutMe');
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - (navbarHeight + 5);
+        window.scrollTo({
+            top: targetPosition,
+            behaviour: 'smooth'
+        })
+    });
+    document.getElementById('contactmeButton').addEventListener('click', function() {
+        const target = document.getElementById('contactMe');
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - (navbarHeight + 5);
+        window.scrollTo({
+            top: targetPosition,
+            behaviour: 'smooth'
+        })
+    });
+
+    document.getElementById("emailContainer").addEventListener("click", function() {
+        const email = "contactme.scottlewis@gmail.com";
+        window.location.href = `mailto:${email}`;
+    });
 });
 
 // function UpdateDuration(scrollScene) {

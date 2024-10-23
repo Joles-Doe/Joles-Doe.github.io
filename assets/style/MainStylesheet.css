@@ -39,12 +39,57 @@ body {
     background-color: rgb(189, 189, 160);
     position: relative;
     padding: 15px;
+    padding-top: 0px;
     width: 1300px;
+}
+
+/* -- Navbar Styles -- */
+
+#navbar {
+    background-color: rgb(189, 189, 160);
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbarTitle {
+    font-size: 50px;
+}
+
+.navbarButtons {
+    display: flex;
+    gap: 2vmin;
+    padding: 5px;
+    align-self: center;
+}
+
+.navbarButtons > button {
+    background-color: rgb(189, 189, 160);
+    padding: 10px;
+    border-color: transparent;
+    outline: 0;
+}
+
+.navbarButtons button > h1 {
+    -webkit-transition: color 0.1s;
+    -moz-transition: color 0.1s;
+    -o-transition: color 0.1s;
+    transition: color 0.1s;
+    
+    font-size: 40px;
+}
+
+.navbarButtons button > h1:hover {
+    color: rgb(196, 109, 94);
 }
 
 /* -- Title Section Styles -- */
 
-.title {
+#title {
     padding-bottom: 15vmin;
     position: relative;
     text-align: center;
@@ -53,7 +98,7 @@ body {
 }
 
 .titleContent {
-    padding-top: 10vmin;
+    padding-top: 5vmin;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -62,7 +107,10 @@ body {
 
 .titleContent > img {
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
     width: 350px;
+    height: 350px;
 }
 
 .titleContent > p {
@@ -73,7 +121,7 @@ body {
 
 /* -- Projects Section Styles -- */
 
-.projects {
+#projects {
     padding: 2vmin;
     border-bottom: 2px solid black;
     display: flex;
@@ -145,8 +193,9 @@ body {
 
 /* -- About Me Section Styles -- */
 
-.aboutMe {
+#aboutMe {
     display: flex;
+    border-bottom: 2px solid black;
 }
 
 .aboutMeTitle {
@@ -172,6 +221,8 @@ body {
     width: 90%;
     font-size: 20px;
     line-height: 1.6;
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
 }
 
 .aboutMePageOne {
@@ -196,8 +247,59 @@ body {
 }
 
 .aboutMePageTwoImages > img {
-    width: 20%;
+    width: 17%;
     height: auto;
+}
+
+/* Contact Me Styles */
+
+#contactMe {
+    padding: 5px;
+    text-align: center;
+}
+
+#contactMe > h1 {
+    font-size: 65px;
+}
+
+#contactMe > p {
+    font-size: 25px;
+}
+
+.contactMeButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 4vmin;
+}
+
+.contactContainer, #emailContainer {
+    background-color: rgb(224, 224, 195);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
+    display: flex;
+    width: 450px;
+    height: 250px;
+}
+
+.contactContainer:hover, #emailContainer:hover {
+    background-color: rgb(218, 218, 208);
+}
+
+.contactMedia {
+    padding: 5px;
+    max-width: 40%;
+    object-fit: contain;
+}
+
+.contactContainer > h1, #emailContainer > h1 {
+    width: 60%;
+    text-align: center;
+    align-self: center;
+    font-size: 50px;
 }
 
 @media only screen and (min-width: 830px) and (max-width: 1299px) {
@@ -205,9 +307,34 @@ body {
         width: 100%;
     }
 
+    /* -- Navbar Styles -- */
+
+    #navbar {
+        gap: 2vmin;
+    }
+
+    .navbarTitle {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+    }
+    
+    .navbarButtons {
+        gap: 0vmin;
+    }
+    
+    .navbarButtons > button {
+        position: relative;
+        top: 5px;
+    }
+    
+    .navbarButtons button > h1 {
+        font-size: 30px;
+    }
+
     /* -- Title Section Styles -- */
 
-    .title {
+    #title {
         font-size: 65px;
     }
 
@@ -264,6 +391,26 @@ body {
     .aboutMePages div > p {
         font-size: 17px;
     }
+
+    /* -- Contact Me Section Styles -- */
+
+    .contactContainer, #emailContainer {
+        width: 350px;
+        height: 200px;
+    }
+    
+    .contactContainer:hover, #emailContainer:hover {
+        background-color: rgb(218, 218, 208);
+    }
+    
+    .contactMedia {
+        max-width: 35%;
+    }
+    
+    .contactContainer > h1, #emailContainer > h1 {
+        width: 65%;
+        font-size: 45px;
+    }
 }
 
 @media only screen and (max-width: 829px) {
@@ -272,9 +419,37 @@ body {
         width: 100%;
     }
 
+    /* -- Navbar Styles -- */
+
+    #navbar {
+        gap: 2vmin;
+    }
+
+    .navbarTitle {
+        display: flex;
+        flex-wrap: wrap;
+        width: 20vmin;
+        align-items: center;
+        font-size: 5vmin;
+    }
+    
+    .navbarButtons {
+        gap: 0vmin;
+    }
+    
+    .navbarButtons > button {
+        padding: 1vmin;
+        position: relative;
+        left: 2vmin;
+    }
+    
+    .navbarButtons button > h1 {
+        font-size: 4vmin;
+    }
+
     /* -- Title Section Styles -- */
 
-    .title {
+    #title {
         font-size: 8vmin;
     }
 
@@ -336,5 +511,36 @@ body {
         padding: 20px;
         width: 30%;
         height: auto;
+    }
+
+    /* -- Contact Me Section Styles */
+
+    #contactMe > h1 {
+        font-size: 12vmin;
+    }
+    
+    #contactMe > p {
+        font-size: 5vmin;
+    }
+
+    .contactMeButtons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 4vmin;
+    }
+    
+    .contactContainer, #emailContainer {
+        width: 40vmin;
+        height: 30vmin;
+    }
+    
+    .contactMedia {
+        max-width: 25%;
+    }
+    
+    .contactContainer > h1, #emailContainer > h1 {
+        width: 65%;
+        font-size: 6vmin;
     }
 }
