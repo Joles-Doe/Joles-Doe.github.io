@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Peculiar Produce - Deserted Duo</title>
+        <meta name="description" content="BFX Game Jam project by team Peculiar Produce">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta property="og:site_name" content="Scott Lewis">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_gb">
+        <meta property="og:url" content="https://joles-doe.github.io/Connect4">
+        <meta property="og:title" content="Deserted Duo">
+        <meta property="og:description" content="BFX Game Jam project by team Peculiar Produce">
+        <meta property="og:image" content="https://raw.githubusercontent.com/Joles-Doe/joles-doe.github.io/refs/heads/main/assets/images/favicon/favicon-512x512.png">
+        <!-- Fonts, Stylesheet and Scripts -->
+        <link rel="stylesheet" href="assets/style/MainStylesheet.css">
+        <link rel="stylesheet" href="assets/style/PageStylesheet.css">
+        </head>
+    
+        <body>
+            <div class="main">
+                <div class="pageTitle">
+                    <noscript>
+                        <h1> This page may not work correctly without Javascript! Please enable it and reload. </h1>
+                    </noscript>
+                    <h1> Deserted Duo </h1>
+                </div>
+                <div class="returnSection">
+                    <button class="returnButton" onclick="document.location='index.html'">
+                        <h1> Return to Homepage </h1>
+                    </button>
+                </div>
+                <div class="titleVideo">
+                    <div class="titleVideoContainer">
+                        <video autoplay muted loop playsinline disablePictureInPicture>
+                            <source src="assets/videos/DesertedDuo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="githubLink">
+                    <button class="githubButton" onclick="window.open('https://github.com/Joles-Doe/Peculiar-Produce', '_blank')">
+                        <img src="assets/images/github.png">
+                        <h1> Link to Github </h1>
+                    </button>
+                </div>
+                <div class="pageContent">
+                    <h1> Introduction </h1>
+                    <p>
+                        During my second year, I had decided to take part in BFX's 2024 game jam with four others. For our prompt, 
+                        we were given the theme of 'connection'. During the planning stage, we felt it best if we made a local multiplayer 
+                        game, as we felt teamwork fit into the theme well. Although we had a time constraint of around 48 hours, our team 
+                        had managed to win first place and received awards for best mechanics and best 3D art.
+                    </p>
+                    <h1> My Role </h1>
+                    <p>
+                        When we started the project, each team member was given a role. I was given the role of 'programming lead' and 
+                        was responsible for creating the mechanics and ensuring everything was properly cleaned up and interacted with each other without problems.
+                    </p>
+                    <h1> Mechanics </h1>
+                    <p>
+                        Deserted Duo has one major gimmick: at the beginning, the player is constrained only to movement. They are unable 
+                        to jump, climb, or perform any other actions apart from moving. The way the players are supposed to navigate the 
+                        environment is by dropping and picking up their keybinds. For example, you could drop your down movement 
+                        keybind and pick up the jump keybind instead.
+                        <br><br>
+                        In order to implement this, we used enumerators in order to identify which keybinds the player held.
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/DesertedDuoSnippet1.png">
+                    </div>
+                    <p>
+                        When the player pressed a key, the movement script would check which block existed in that particular key and respond accordingly.
+                    </p>
+                    <h1> Respawning and Checkpoints </h1>
+                    <p>
+                        Due to the nature of the ragdolls implemented by the other team members, changing their position in a script appeared to have 
+                        resulted in unusual behaviour. To remedy this issue, I had decided to store the players as prefabs and created a clone at the 
+                        checkpoint. In order to accomplish this, I needed to have added two things: checkpoints throughout the level and a script that 
+                        would re-enter any needed information the player had before they died.
+                        <br><br>
+                        Firstly, I started on the checkpoints. I created a bunch of squares and set them as triggers. Once triggered, it would call a 
+                        parent function and pass through the player and the trigger's location:
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/DesertedDuoSnippet2.png">
+                    </div>
+                    <p>
+                        If the player was the one colliding with the checkpoint and didn't already have that checkpoint stored, would call the component on the player to store that checkpoint location.
+                        <br><br>
+                        Next was the respawn mechanic. I created a script with a function that, when called, would grab the player that needed to respawn, 
+                        re-instantiate them in the world, and give them all the necessary components that they would need.
+                    </p>
+                    <div class="inlineMediaContainer singleMedia">
+                        <img src="assets/images/DesertedDuoSnippet3.png">
+                    </div>
+                    <h1> What did I learn? </h1>
+                    <p> 
+                        In this project, I got to experience firsthand the development pipeline that occurs when creating a game. As lead programmer, 
+                        I got to see how other team members created their parts of the game and the problem-solving skills I had to employ in order to get those elements to work with the rest of the game.
+                        Overall, I was extremely pleased with how Deserted Duo came about and cannot wait to take part in BFX 2025.
+                    </p>
+                </div>
+            </div>
+        </body>
+    </html>
